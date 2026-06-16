@@ -415,7 +415,6 @@ features_finales = [
 
 ---
 
-📊 Análisis de Correlaciones con No-show
 ## 📊 Análisis de Correlaciones con No-show
 
 ### 🟢 FUERTE ASOCIACIÓN (Prioridad Alta)
