@@ -1,0 +1,6 @@
+column,unique_values,cardinality_level,entropy,chi2_statistic,chi2_p_value,chi2_significant,chi2_interpretation,cramers_v,cramers_v_interpretation,top_category,top_category_pct
+Gender,2,LOW,0.9340886583022923,1.8534369792394627,0.17338418189785987,False,No significant association with target,0.00409500768110257,Very weak association,F,64.99769287142509
+ScheduledDay,103549,HIGH,16.61042102617589,105527.32299024715,7.67972977474261e-06,True,Significant association with target,0.9771208252207834,Strong association,2016-05-06T07:09:54Z,0.021714151293349138
+AppointmentDay,27,LOW,4.699595369857652,212.7491209127808,3.127831155959812e-31,True,Significant association with target,0.04387323880143771,Very weak association,2016-06-06T00:00:00Z,4.245116577849757
+Neighbourhood,81,LOW,5.715893401548353,491.92786949651384,1.5424359262217237e-60,True,Significant association with target,0.06671392965385306,Very weak association,JARDIM CAMBURI,6.982004397115638
+No-show,2,LOW,0.7257764162896437,110520.7949117622,0.0,True,Significant association with target,0.9999719291425168,Strong association,No,79.8067440534892

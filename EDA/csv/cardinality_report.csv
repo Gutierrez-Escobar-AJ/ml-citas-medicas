@@ -1,0 +1,15 @@
+column,dtype,unique_values,cardinality_level,is_high_cardinality,warning
+AppointmentID,int64,110527,HIGH,True,⚠️ HIGH CARDINALITY: 110527 unique values - may cause performance issues
+ScheduledDay,object,103549,HIGH,True,⚠️ HIGH CARDINALITY: 103549 unique values - may cause performance issues
+PatientId,float64,62299,HIGH,True,⚠️ HIGH CARDINALITY: 62299 unique values - may cause performance issues
+Age,int64,104,LOW,False,
+Neighbourhood,object,81,LOW,False,
+AppointmentDay,object,27,LOW,False,
+Handcap,int64,5,LOW,False,
+Gender,object,2,LOW,False,
+Hipertension,int64,2,LOW,False,
+Scholarship,int64,2,LOW,False,
+Diabetes,int64,2,LOW,False,
+Alcoholism,int64,2,LOW,False,
+SMS_received,int64,2,LOW,False,
+No-show,object,2,LOW,False,
