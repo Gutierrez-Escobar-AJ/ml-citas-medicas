@@ -1,0 +1,10 @@
+column,is_numeric,is_normal,normality_p_value,skewness,kurtosis,outlier_severity,outlier_pct_iqr,preferred_method,reasoning,suggested_correlation,suggested_group_test
+PatientId,True,False,0.0,1.9677293178088489,2.5828590041665893,severe,19.53187908836755,non_parametric,non-normal distribution (p=0.0000) + severe outliers (19.5% IQR),spearman,mannwhitneyu
+AppointmentID,True,False,0.0,-1.2355875713497477,3.7437589919747016,mild,2.6654120712586065,non_parametric,non-normal distribution (p=0.0000),spearman,mannwhitneyu
+Age,True,False,0.0,0.12165801789597985,-0.952267394656098,mild,0.004523781519447737,non_parametric,non-normal distribution (p=0.0000),spearman,mannwhitneyu
+Scholarship,True,False,0.0,2.6991989199965536,5.285770456065958,severe,9.826558216544374,non_parametric,non-normal distribution (p=0.0000) + severe outliers (9.8% IQR),spearman,mannwhitneyu
+Hipertension,True,False,0.0,1.5217055164376079,0.315593389131378,severe,19.72459218109602,non_parametric,non-normal distribution (p=0.0000) + severe outliers (19.7% IQR),spearman,mannwhitneyu
+Diabetes,True,False,0.0,3.315531196442698,8.992909842094743,severe,7.186479321794674,non_parametric,non-normal distribution (p=0.0000) + severe outliers (7.2% IQR),spearman,mannwhitneyu
+Alcoholism,True,False,0.0,5.470567220225502,27.927611064321678,moderate,3.039981181068879,non_parametric,non-normal distribution (p=0.0000) + moderate outliers (3.0% IQR),spearman,mannwhitneyu
+Handcap,True,False,0.0,8.274398600761113,82.55571691298272,moderate,2.0275588770164754,non_parametric,non-normal distribution (p=0.0000) + moderate outliers (2.0% IQR),spearman,mannwhitneyu
+SMS_received,True,False,0.0,0.7667083327991944,-1.4121838863891898,none,0.0,non_parametric,non-normal distribution (p=0.0000),spearman,mannwhitneyu
