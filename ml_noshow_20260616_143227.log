@@ -1,0 +1,189 @@
+2026-06-16 14:32:27,742 | __main__ | INFO | ⚠️ GridSearchCV DISABLED - Using default parameters (MEMORIA OPTIMIZADA)
+2026-06-16 14:32:27,742 | __main__ | INFO | Dataset limit: 30000 samples máximo
+2026-06-16 14:32:27,742 | __main__ | INFO | N_JOBS: 2 (para evitar saturar memoria)
+2026-06-16 14:32:27,742 | __main__ | INFO | ================================================================================
+2026-06-16 14:32:27,742 | __main__ | INFO | PREDICTIVE MODELING: No-Show Prediction (VERSIÓN OPTIMIZADA)
+2026-06-16 14:32:27,742 | __main__ | INFO | Random Forest vs XGBoost - Medical Appointments
+2026-06-16 14:32:27,742 | __main__ | INFO | ================================================================================
+2026-06-16 14:32:27,742 | __main__ | INFO | ================================================================================
+2026-06-16 14:32:27,742 | __main__ | INFO | DATA LOADING & PREPROCESSING (No-Show Dataset) - OPTIMIZADO
+2026-06-16 14:32:27,742 | __main__ | INFO | ================================================================================
+2026-06-16 14:32:27,855 | __main__ | INFO | Loaded noshow.csv (110527 registros, 12 columnas)
+2026-06-16 14:32:27,864 | __main__ | WARNING | ⚠️ Dataset muestreado a 30000 registros para optimizar memoria
+2026-06-16 14:32:27,865 | __main__ | INFO | Shape final: (30000, 12)
+2026-06-16 14:32:27,868 | __main__ | INFO | Target distribution: {0: 24022, 1: 5978}
+2026-06-16 14:32:27,868 | __main__ | INFO | Numeric features: 7
+2026-06-16 14:32:27,897 | __main__ | INFO | ✅ Created feature: WaitDays
+2026-06-16 14:32:27,897 | __main__ | INFO |   WaitDays - min: -2, max: 178
+2026-06-16 14:32:27,898 | __main__ | INFO | Encoded 'Gender' (F=0, M=1)
+2026-06-16 14:32:27,901 | __main__ | INFO | Encoded 'Neighbourhood' as frequency
+2026-06-16 14:32:27,908 | __main__ | INFO | Total features: 10
+2026-06-16 14:32:27,908 | __main__ | INFO | Features: ['Age', 'Scholarship', 'Hipertension', 'Diabetes', 'Alcoholism', 'Handcap', 'SMS_received', 'WaitDays', 'Gender_encoded', 'Neighbourhood_freq']
+2026-06-16 14:32:27,909 | __main__ | INFO | Memory usage: 1.29 MB
+2026-06-16 14:32:27,909 | __main__ | INFO | Imbalance ratio: 4.02:1
+2026-06-16 14:32:27,909 | __main__ | WARNING | Severe imbalance - using class weights
+2026-06-16 14:32:27,909 | __main__ | INFO | Selecting top 8 features using Mutual Information...
+2026-06-16 14:32:28,773 | __main__ | INFO | Selected 8 features:
+2026-06-16 14:32:28,774 | __main__ | INFO |   1. WaitDays (MI: 0.0471)
+2026-06-16 14:32:28,774 | __main__ | INFO |   2. SMS_received (MI: 0.0063)
+2026-06-16 14:32:28,774 | __main__ | INFO |   3. Alcoholism (MI: 0.0037)
+2026-06-16 14:32:28,774 | __main__ | INFO |   4. Hipertension (MI: 0.0033)
+2026-06-16 14:32:28,774 | __main__ | INFO |   5. Scholarship (MI: 0.0031)
+2026-06-16 14:32:28,774 | __main__ | INFO |   6. Age (MI: 0.0026)
+2026-06-16 14:32:28,774 | __main__ | INFO |   7. Gender_encoded (MI: 0.0017)
+2026-06-16 14:32:28,774 | __main__ | INFO |   8. Diabetes (MI: 0.0000)
+2026-06-16 14:32:28,774 | __main__ | INFO | Scaling features with ROBUST scaler...
+2026-06-16 14:32:28,781 | __main__ | INFO | Feature scaling completed
+2026-06-16 14:32:28,781 | __main__ | INFO | Splitting data into train (80%) and test (20%) sets...
+2026-06-16 14:32:28,788 | __main__ | INFO | Train set: 24000 samples
+2026-06-16 14:32:28,788 | __main__ | INFO | Test set: 6000 samples
+2026-06-16 14:32:28,788 | __main__ | INFO | Train set: 24000 samples
+2026-06-16 14:32:28,788 | __main__ | INFO | Test set: 6000 samples
+2026-06-16 14:32:28,789 | __main__ | INFO | Features: ['WaitDays', 'SMS_received', 'Alcoholism', 'Hipertension', 'Scholarship', 'Age', 'Gender_encoded', 'Diabetes']
+2026-06-16 14:32:28,789 | __main__ | INFO | ----------------------------------------
+2026-06-16 14:32:28,789 | __main__ | INFO | Training Random Forest...
+2026-06-16 14:32:28,789 | __main__ | INFO | GridSearch DESACTIVADO - Usando parámetros por defecto
+2026-06-16 14:32:29,791 | __main__ | INFO | Random Forest configured with:
+2026-06-16 14:32:29,792 | __main__ | INFO |   n_estimators: 200
+2026-06-16 14:32:29,792 | __main__ | INFO |   max_depth: 20
+2026-06-16 14:32:29,792 | __main__ | INFO |   min_samples_split: 5
+2026-06-16 14:32:29,792 | __main__ | INFO |   min_samples_leaf: 2
+2026-06-16 14:32:29,792 | __main__ | INFO |   class_weight: balanced
+2026-06-16 14:32:29,792 | __main__ | INFO |   random_state: 42
+2026-06-16 14:32:29,792 | __main__ | INFO |   n_jobs: 2
+2026-06-16 14:32:29,792 | __main__ | INFO | Cross-validating Random Forest with 5 folds...
+2026-06-16 14:32:39,305 | __main__ | INFO | Random Forest CV results:
+2026-06-16 14:32:39,305 | __main__ | INFO |   accuracy: 0.6988
+2026-06-16 14:32:39,305 | __main__ | INFO |   precision: 0.3159
+2026-06-16 14:32:39,305 | __main__ | INFO |   recall: 0.4389
+2026-06-16 14:32:39,305 | __main__ | INFO |   f1_score: 0.3674
+2026-06-16 14:32:39,305 | __main__ | INFO |   roc_auc: 0.6838
+2026-06-16 14:32:39,305 | __main__ | INFO |   mcc: 0.1807
+2026-06-16 14:32:39,305 | __main__ | INFO |   kappa: 0.1766
+2026-06-16 14:32:39,305 | __main__ | INFO | Evaluating Random Forest on test set...
+2026-06-16 14:32:39,465 | __main__ | INFO | Random Forest test results:
+2026-06-16 14:32:39,465 | __main__ | INFO |   accuracy: 0.6993
+2026-06-16 14:32:39,466 | __main__ | INFO |   precision: 0.3169
+2026-06-16 14:32:39,466 | __main__ | INFO |   recall: 0.4398
+2026-06-16 14:32:39,466 | __main__ | INFO |   f1_score: 0.3683
+2026-06-16 14:32:39,466 | __main__ | INFO |   roc_auc: 0.6807
+2026-06-16 14:32:39,466 | __main__ | INFO |   mcc: 0.1820
+2026-06-16 14:32:39,466 | __main__ | INFO |   kappa: 0.1778
+2026-06-16 14:32:39,466 | __main__ | INFO | ----------------------------------------
+2026-06-16 14:32:39,466 | __main__ | INFO | Training XGBoost...
+2026-06-16 14:32:39,466 | __main__ | INFO | GridSearch DESACTIVADO - Usando parámetros por defecto para XGBoost
+2026-06-16 14:32:39,677 | __main__ | INFO | XGBoost configured with:
+2026-06-16 14:32:39,677 | __main__ | INFO |   n_estimators: 200
+2026-06-16 14:32:39,677 | __main__ | INFO |   max_depth: 6
+2026-06-16 14:32:39,677 | __main__ | INFO |   learning_rate: 0.05
+2026-06-16 14:32:39,677 | __main__ | INFO |   subsample: 0.9
+2026-06-16 14:32:39,677 | __main__ | INFO |   colsample_bytree: 0.9
+2026-06-16 14:32:39,677 | __main__ | INFO |   random_state: 42
+2026-06-16 14:32:39,677 | __main__ | INFO |   use_label_encoder: False
+2026-06-16 14:32:39,677 | __main__ | INFO |   eval_metric: logloss
+2026-06-16 14:32:39,677 | __main__ | INFO |   scale_pos_weight: 4.018820577164367
+2026-06-16 14:32:39,677 | __main__ | INFO | Cross-validating XGBoost with 5 folds...
+2026-06-16 14:32:41,269 | __main__ | INFO | XGBoost CV results:
+2026-06-16 14:32:41,270 | __main__ | INFO |   accuracy: 0.6066
+2026-06-16 14:32:41,270 | __main__ | INFO |   precision: 0.3045
+2026-06-16 14:32:41,270 | __main__ | INFO |   recall: 0.7587
+2026-06-16 14:32:41,270 | __main__ | INFO |   f1_score: 0.4345
+2026-06-16 14:32:41,270 | __main__ | INFO |   roc_auc: 0.7156
+2026-06-16 14:32:41,270 | __main__ | INFO |   mcc: 0.2616
+2026-06-16 14:32:41,270 | __main__ | INFO |   kappa: 0.2098
+2026-06-16 14:32:41,270 | __main__ | INFO | Evaluating XGBoost on test set...
+2026-06-16 14:32:41,283 | __main__ | INFO | XGBoost test results:
+2026-06-16 14:32:41,283 | __main__ | INFO |   accuracy: 0.6052
+2026-06-16 14:32:41,283 | __main__ | INFO |   precision: 0.3046
+2026-06-16 14:32:41,283 | __main__ | INFO |   recall: 0.7642
+2026-06-16 14:32:41,283 | __main__ | INFO |   f1_score: 0.4355
+2026-06-16 14:32:41,283 | __main__ | INFO |   roc_auc: 0.7230
+2026-06-16 14:32:41,283 | __main__ | INFO |   mcc: 0.2635
+2026-06-16 14:32:41,283 | __main__ | INFO |   kappa: 0.2105
+2026-06-16 14:32:41,284 | __main__ | INFO | Saved best hyperparameters: ML_MODELS_NOSHOW/csv/best_hyperparameters_noshow.csv
+2026-06-16 14:32:41,284 | __main__ | INFO | ----------------------------------------
+2026-06-16 14:32:41,284 | __main__ | INFO | BEST HYPERPARAMETERS FOUND (No-Show)
+2026-06-16 14:32:41,284 | __main__ | INFO | ----------------------------------------
+2026-06-16 14:32:41,284 | __main__ | INFO | random_forest:
+2026-06-16 14:32:41,284 | __main__ | INFO |   n_estimators: 200
+2026-06-16 14:32:41,284 | __main__ | INFO |   max_depth: 20
+2026-06-16 14:32:41,284 | __main__ | INFO |   min_samples_split: 5
+2026-06-16 14:32:41,284 | __main__ | INFO |   min_samples_leaf: 2
+2026-06-16 14:32:41,284 | __main__ | INFO |   class_weight: balanced
+2026-06-16 14:32:41,284 | __main__ | INFO |   random_state: 42
+2026-06-16 14:32:41,284 | __main__ | INFO |   n_jobs: 2
+2026-06-16 14:32:41,284 | __main__ | INFO | xgboost:
+2026-06-16 14:32:41,284 | __main__ | INFO |   n_estimators: 200
+2026-06-16 14:32:41,284 | __main__ | INFO |   max_depth: 6
+2026-06-16 14:32:41,284 | __main__ | INFO |   learning_rate: 0.05
+2026-06-16 14:32:41,284 | __main__ | INFO |   subsample: 0.9
+2026-06-16 14:32:41,284 | __main__ | INFO |   colsample_bytree: 0.9
+2026-06-16 14:32:41,284 | __main__ | INFO |   random_state: 42
+2026-06-16 14:32:41,285 | __main__ | INFO |   use_label_encoder: False
+2026-06-16 14:32:41,285 | __main__ | INFO |   eval_metric: logloss
+2026-06-16 14:32:41,285 | __main__ | INFO |   scale_pos_weight: 4.018820577164367
+2026-06-16 14:32:41,552 | __main__ | INFO | Saved ROC curves: ML_MODELS_NOSHOW/plots/roc_curves_noshow.png
+2026-06-16 14:32:41,788 | __main__ | INFO | Saved confusion matrices: ML_MODELS_NOSHOW/plots/confusion_matrices_noshow.png
+2026-06-16 14:32:41,802 | __main__ | INFO | Saved classification reports: ML_MODELS_NOSHOW/csv/classification_reports_noshow.csv
+2026-06-16 14:32:41,912 | __main__ | INFO | Saved ROC curves: ML_MODELS_NOSHOW/plots/roc_curves_noshow_test.png
+2026-06-16 14:32:42,141 | __main__ | INFO | Saved confusion matrices: ML_MODELS_NOSHOW/plots/confusion_matrices_noshow_test.png
+2026-06-16 14:32:42,151 | __main__ | INFO | Saved classification reports: ML_MODELS_NOSHOW/csv/classification_reports_noshow_test.csv
+2026-06-16 14:32:42,217 | __main__ | INFO | Extracted feature importance for random_forest
+2026-06-16 14:32:42,217 | __main__ | INFO |   Top 5 features for random_forest:
+2026-06-16 14:32:42,217 | __main__ | INFO |     WaitDays: 0.5332
+2026-06-16 14:32:42,217 | __main__ | INFO |     Age: 0.3963
+2026-06-16 14:32:42,217 | __main__ | INFO |     SMS_received: 0.0260
+2026-06-16 14:32:42,217 | __main__ | INFO |     Gender_encoded: 0.0165
+2026-06-16 14:32:42,217 | __main__ | INFO |     Hipertension: 0.0084
+2026-06-16 14:32:42,219 | __main__ | INFO | Extracted feature importance for xgboost
+2026-06-16 14:32:42,219 | __main__ | INFO |   Top 5 features for xgboost:
+2026-06-16 14:32:42,219 | __main__ | INFO |     WaitDays: 0.4196
+2026-06-16 14:32:42,219 | __main__ | INFO |     SMS_received: 0.1401
+2026-06-16 14:32:42,219 | __main__ | INFO |     Age: 0.1015
+2026-06-16 14:32:42,219 | __main__ | INFO |     Gender_encoded: 0.0935
+2026-06-16 14:32:42,219 | __main__ | INFO |     Alcoholism: 0.0651
+2026-06-16 14:32:42,450 | __main__ | INFO | Saved feature importance comparison: ML_MODELS_NOSHOW/plots/feature_importance_noshow_comparison.png
+2026-06-16 14:32:42,451 | __main__ | INFO | Saved feature importance for random_forest: ML_MODELS_NOSHOW/csv/feature_importance_noshow_random_forest.csv
+2026-06-16 14:32:42,451 | __main__ | INFO | Saved feature importance for xgboost: ML_MODELS_NOSHOW/csv/feature_importance_noshow_xgboost.csv
+2026-06-16 14:32:42,452 | __main__ | INFO | Model comparison (cv):
+2026-06-16 14:32:42,452 | __main__ | INFO |   accuracy: 0.6988 vs 0.6066 → Random Forest better
+2026-06-16 14:32:42,452 | __main__ | INFO |   precision: 0.3159 vs 0.3045 → Random Forest better
+2026-06-16 14:32:42,452 | __main__ | INFO |   recall: 0.4389 vs 0.7587 → XGBoost better
+2026-06-16 14:32:42,452 | __main__ | INFO |   f1_score: 0.3674 vs 0.4345 → XGBoost better
+2026-06-16 14:32:42,452 | __main__ | INFO |   roc_auc: 0.6838 vs 0.7156 → XGBoost better
+2026-06-16 14:32:42,452 | __main__ | INFO |   mcc: 0.1807 vs 0.2616 → XGBoost better
+2026-06-16 14:32:42,453 | __main__ | INFO |   kappa: 0.1766 vs 0.2098 → XGBoost better
+2026-06-16 14:32:42,453 | __main__ | INFO | Model comparison (test):
+2026-06-16 14:32:42,453 | __main__ | INFO |   accuracy: 0.6993 vs 0.6052 → Random Forest better
+2026-06-16 14:32:42,453 | __main__ | INFO |   precision: 0.3169 vs 0.3046 → Random Forest better
+2026-06-16 14:32:42,453 | __main__ | INFO |   recall: 0.4398 vs 0.7642 → XGBoost better
+2026-06-16 14:32:42,454 | __main__ | INFO |   f1_score: 0.3683 vs 0.4355 → XGBoost better
+2026-06-16 14:32:42,454 | __main__ | INFO |   roc_auc: 0.6807 vs 0.7230 → XGBoost better
+2026-06-16 14:32:42,454 | __main__ | INFO |   mcc: 0.1820 vs 0.2635 → XGBoost better
+2026-06-16 14:32:42,454 | __main__ | INFO |   kappa: 0.1778 vs 0.2105 → XGBoost better
+2026-06-16 14:32:42,454 | __main__ | INFO | McNemar test (cv): χ² = 797.0978, p = 0.0000
+2026-06-16 14:32:42,454 | __main__ | INFO |   Models perform differently
+2026-06-16 14:32:42,455 | __main__ | INFO | McNemar test (test): χ² = 199.1835, p = 0.0000
+2026-06-16 14:32:42,455 | __main__ | INFO |   Models perform differently
+2026-06-16 14:32:42,455 | __main__ | INFO | Generating learning curves for random_forest...
+2026-06-16 14:32:58,905 | __main__ | INFO | Saved learning curves: ML_MODELS_NOSHOW/plots/learning_curves_noshow_random_forest.png
+2026-06-16 14:32:58,905 | __main__ | INFO | Generating learning curves for xgboost...
+2026-06-16 14:33:02,169 | __main__ | INFO | Saved learning curves: ML_MODELS_NOSHOW/plots/learning_curves_noshow_xgboost.png
+2026-06-16 14:33:02,169 | __main__ | INFO | ================================================================================
+2026-06-16 14:33:02,169 | __main__ | INFO | FINAL RECOMMENDATION - No-Show Prediction
+2026-06-16 14:33:02,169 | __main__ | INFO | ================================================================================
+2026-06-16 14:33:02,169 | __main__ | INFO | Best performing model on TEST SET: XGBoost (ROC-AUC = 0.7230)
+2026-06-16 14:33:02,169 | __main__ | INFO | 
+2026-06-16 14:33:02,169 | __main__ | INFO | Model comparison:
+2026-06-16 14:33:02,169 | __main__ | INFO |   Random Forest AUC: 0.6807
+2026-06-16 14:33:02,169 | __main__ | INFO |   XGBoost AUC: 0.7230
+2026-06-16 14:33:02,169 | __main__ | INFO |   → XGBoost outperforms Random Forest on test data
+2026-06-16 14:33:02,169 | __main__ | INFO | 
+2026-06-16 14:33:02,169 | __main__ | INFO | Key Insights for No-Show Prediction:
+2026-06-16 14:33:02,169 | __main__ | INFO |   1. SMS_received is the most important predictor
+2026-06-16 14:33:02,169 | __main__ | INFO |   2. Age and WaitDays are also significant factors
+2026-06-16 14:33:02,169 | __main__ | INFO |   3. Class imbalance (3.95:1) requires careful handling
+2026-06-16 14:33:02,169 | __main__ | INFO | ================================================================================
+2026-06-16 14:33:02,169 | __main__ | INFO | PREDICTIVE MODELING FOR NO-SHOW COMPLETED
+2026-06-16 14:33:02,169 | __main__ | INFO | Results saved in: ML_MODELS_NOSHOW/
+2026-06-16 14:33:02,169 | __main__ | INFO | ================================================================================
