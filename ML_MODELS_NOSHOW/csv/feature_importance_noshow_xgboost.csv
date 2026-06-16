@@ -1,0 +1,9 @@
+feature,importance
+WaitDays,0.41964233
+SMS_received,0.14010961
+Age,0.10153159
+Gender_encoded,0.09348961
+Alcoholism,0.065102376
+Hipertension,0.06260534
+Diabetes,0.058771495
+Scholarship,0.058747668
